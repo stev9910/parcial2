@@ -20,18 +20,9 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBO-qgPol96BEVgPiDxx_llYkdu781QvY0" />
+            android:value="AIzaSyD5vE7-2NS8t82wHnxC79YkXM7HL-JKj_c" />
 
 
-        <activity
-            android:name=".pantalla_multiplicacion"
-            android:exported="false" />
-        <activity
-            android:name=".pantalla_potencia"
-            android:exported="false" />
-        <activity
-            android:name=".pantalla_fibonacci"
-            android:exported="false" />
         <activity
             android:name=".pantalla_principal"
             android:exported="true">

@@ -2,6 +2,7 @@ package com.example.operaciones_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,13 +12,16 @@ import android.widget.EditText;
 public class pantalla_principal extends AppCompatActivity {
 
     Button botonopcion;
-    EditText valoropcion;
+    EditText usuario;
+    EditText password;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pantalla_principal);
-        valoropcion=findViewById(R.id.campo_op);
+        usuario=findViewById(R.id.campo_usuario);
+        password=findViewById(R.id.campo_password);
         botonopcion=findViewById(R.id.boton_op);
         botonopcion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,17 +31,11 @@ public class pantalla_principal extends AppCompatActivity {
         });
     }
     public void cambiarpantalla(){
-        int valoropci = Integer.parseInt(valoropcion.getText().toString());
+        int valoropci = Integer.parseInt(usuario.getText().toString());
         if(valoropci == 1) {
-            Intent pantfibo = new Intent(this,pantalla_fibonacci.class);
-            startActivity(pantfibo);
-        }else if(valoropci == 2){
-            Intent pantpoten = new Intent(this,pantalla_potencia.class);
-            startActivity(pantpoten);
-        }else if(valoropci == 3) {
-            Intent pantmulti = new Intent(this, pantalla_multiplicacion.class);
-            startActivity(pantmulti);
-        }else if(valoropci == 4) {
+
+
+        }else if(valoropci == 2) {
             Intent pantubi = new Intent(this, Ubicacion_u.class);
             startActivity(pantubi);
         }else {
